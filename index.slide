@@ -1,0 +1,93 @@
+BSV Package
+
+28 Aug 2019
+Tags: go golang bitcoin bsv tokenized
+
+Scott Barr
+Founder of Tokenized
+
+
+* Who am I?
+
+- Loves building systems
+- Performance matters
+- Golang, Python, Ruby, Javascript
+- Founder and Head of Engineering at [[https://tokenized.com][Tokenized.com]]
+- [[https://twitter.com/scottjbarr][@scottjbarr]]
+
+
+* Tokenized
+
+"Tokenized is the easiest and safest way to issue, manage and trade security and utility tokens on the Bitcoin SV network."
+
+.image images/tokenized-logo.png
+
+
+* Why Bitcoin SV?
+
+Some of the big reasons.
+
+- Adheres to the original [[http://bitcoin.org/bitcoin.pdf][Bitcoin White Paper]] by Satoshi Nakamoto
+- Companies and community
+- Fast, low fees
+- Massive scaling
+- Stress Test Network
+- OP_RETURN
+
+
+* A Little Bit About Bitcoin (SV)
+
+.image images/fork-timeline.jpg
+
+
+* Anatomy of a Bitcoin Transaction
+
+- [[https://whatsonchain.com/tx/c827849736510a8efb75649aa4e9bc12c822e97399b0a33771f2d8ee34ccde4b][A simple TX]]
+- [[https://whatsonchain.com/tx/afdba0969e85ea2ae2547629439ba21dee694c46986b0c1a289b4677c9df8569][TX with OP_RETURN]]
+
+
+* Data in your TX
+
+Using `OP_RETURN` you can put information in transactions.
+
+- Text
+- JSON
+- Binary data
+- Images
+- Documents
+
+
+* Mixing Money and Data
+
+If you have data in your money, your data is truly worth something.
+
+Data in the TX may be more valuable than the small amount needed to send the TX.
+
+
+* OP_RETURN Limits
+
+Current `OP_RETURN` limit is 2GB.
+
+Feb 2020 will see all remaining limits removed as part of the "Genesis" upgrade which plans to remove all limits introduced by the Bitcoin core team.
+
+
+* The BSV Package
+
+A small project to make life easier when working with Bitcoin transations in Go.
+
+Inspired by the excellent [https://github.com/moneybutton/bsv]Javascript package]] by Money Button.
+
+
+* Demo Time
+
+.image ./images/screenshot.png
+
+
+* Thanks!
+
+* References
+
+- [[https://github.com/scottjbarr/bsv]]
+- [[https://github.com/scottjbarr/bsv-presentation]]
+- [[Paymail Transaction][https://whatsonchain.com/tx/afdba0969e85ea2ae2547629439ba21dee694c46986b0c1a289b4677c9df8569]]
+- [The Original Bitcoin White Paper][http://bitcoin.org/bitcoin.pdf]
