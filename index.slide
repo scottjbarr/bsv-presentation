@@ -1,18 +1,19 @@
 BSV Package
 
+Making it easier to work with Bitcoin SV in Go.
+
 28 Aug 2019
 Tags: go golang bitcoin bsv tokenized
 
 Scott Barr
-Founder of Tokenized
 
 
 * Who am I?
 
-- Loves building systems
-- Performance matters
-- Golang, Python, Ruby, Javascript
 - Founder and Head of Engineering at [[https://tokenized.com][Tokenized.com]]
+- Still loves building systems!
+- Performance matters
+- Go, Python, Javascript (and a bunch of others!)
 - [[https://twitter.com/scottjbarr][@scottjbarr]]
 
 
@@ -32,7 +33,7 @@ Some of the big reasons.
 - Fast, low fees
 - Massive scaling
 - Stress Test Network
-- OP_RETURN
+- `OP_RETURN`
 
 
 * A Little Bit About Bitcoin (SV)
@@ -43,7 +44,6 @@ Some of the big reasons.
 * Anatomy of a Bitcoin Transaction
 
 - [[https://whatsonchain.com/tx/c827849736510a8efb75649aa4e9bc12c822e97399b0a33771f2d8ee34ccde4b][A simple TX]]
-- [[https://whatsonchain.com/tx/afdba0969e85ea2ae2547629439ba21dee694c46986b0c1a289b4677c9df8569][TX with OP_RETURN]]
 
 
 * Data in your TX
@@ -57,9 +57,14 @@ Using `OP_RETURN` you can put information in transactions.
 - Documents
 
 
+* Bitcoin Transaction With OP_RETURN Data
+
+- [[https://whatsonchain.com/tx/afdba0969e85ea2ae2547629439ba21dee694c46986b0c1a289b4677c9df8569][TX with OP_RETURN]]
+
+
 * Mixing Money and Data
 
-If you have data in your money, your data is truly worth something.
+If you have data in your money, your data is literally worth something.
 
 Data in the TX may be more valuable than the small amount needed to send the TX.
 
@@ -75,19 +80,64 @@ Feb 2020 will see all remaining limits removed as part of the "Genesis" upgrade 
 
 A small project to make life easier when working with Bitcoin transations in Go.
 
-Inspired by the excellent [https://github.com/moneybutton/bsv]Javascript package]] by Money Button.
+Inspired by the excellent [[https://github.com/moneybutton/bsv][Javascript package]] by Money Button.
+
+Still a work in progress, lots of new powers coming.
 
 
-* Demo Time
+* Why?
 
-.image ./images/screenshot.png
+Working with Bitcoin should be easier.
+
+
+* Examples
+
+
+* Add TX Input
+
+Add an input to your TX.
+
+You'll need a [[https://stn.whatsonchain.com/tx/c762a29a4beb4821ad843590c3f11ffaed38b7eadc74557bdf36da3539921531][UTXO]].
+
+.code code/builder_example.go /^func AddInput/,/^}/
+
+
+
+
+* Add Outputs
+
+Add outputs to your TX.
+
+.code code/builder_example.go /^func AddOutputs/,/^}/
+
+
+* Add OP_RETURN
+
+Example showing how to add `OP_RETURN` data to your TX.
+
+.code code/builder_example.go /^func OpReturnData/,/^}/
+
+
+* Signing
+
+Signing your TX.
+
+.code code/builder_example.go /^func Sign/,/^}/
+
+
+* Serializing
+
+Serialize the TX. This is what you send to the network.
+
+.code code/builder_example.go /^func Serialize/,/^}/
 
 
 * Thanks!
 
 * References
 
-- [[https://github.com/scottjbarr/bsv]]
 - [[https://github.com/scottjbarr/bsv-presentation]]
-- [[Paymail Transaction][https://whatsonchain.com/tx/afdba0969e85ea2ae2547629439ba21dee694c46986b0c1a289b4677c9df8569]]
-- [The Original Bitcoin White Paper][http://bitcoin.org/bitcoin.pdf]
+- [[https://github.com/scottjbarr/bsv]]
+- [[https://tokenized.com][Tokenized]]
+- [[https://bitcoin.org/bitcoin.pdf][The Original Bitcoin White Paper]]
+- [[https://github.com/moneybutton/bsv][Money Button BSV library]]
